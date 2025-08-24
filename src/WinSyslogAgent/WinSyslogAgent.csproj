@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+  <PropertyGroup>
+    <!-- Target Windows-specific framework since EventLog is only available on Windows. -->
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <OutputType>Exe</OutputType>
+    <!-- Enable to run as a Windows Service when published. -->
+    <UseWindowsService>true</UseWindowsService>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Bring in hosting and logging packages -->
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
+  </ItemGroup>
+</Project>
